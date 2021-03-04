@@ -1,0 +1,9 @@
+<mapper namespace="com.sangedon.batisclient.dao.IUserDao">
+    <select id="findAll" resultType="com.sangedon.batisclient.po.User">
+        select * from user;
+    </select>
+
+    <select id="findByCondition" resultType="com.sangedon.batisclient.po.User" parameterType="com.sangedon.batisclient.po.User">
+        select * from user where id=#{id} and username=#{username};
+    </select>
+</mapper>
